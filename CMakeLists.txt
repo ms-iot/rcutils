@@ -34,6 +34,10 @@ if(NOT WIN32)
   # Hence disabling -Wsign-conversion for now until all those have eventually been fixed.
   # (from https://github.com/ros2/rcutils/pull/263#issuecomment-663252537)
   add_compile_options(-Wall -Wextra -Wconversion -Wno-sign-conversion -Wpedantic)
+else()
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /wd5105")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /wd5105")
+  
 endif()
 
 if(WIN32)

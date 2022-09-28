@@ -17,13 +17,6 @@ extern "C"
 {
 #endif
 
-#include <ctype.h>
-#include <errno.h>
-#include <inttypes.h>
-#include <stdint.h>
-#include <stdio.h>
-#include <string.h>
-
 #ifdef _WIN32
 # include <io.h>
 // When building with MSVC 19.28.29333.0 on Windows 10 (as of 2020-11-11),
@@ -41,6 +34,13 @@ extern "C"
 #else
 # include <unistd.h>
 #endif
+
+#include <ctype.h>
+#include <errno.h>
+#include <inttypes.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <string.h>
 
 #include "rcutils/allocator.h"
 #include "rcutils/error_handling.h"

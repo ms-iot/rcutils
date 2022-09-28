@@ -16,13 +16,6 @@
 extern "C"
 {
 #endif
-#include "rcutils/filesystem.h"
-
-#include <errno.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/stat.h>
 #ifndef _WIN32
 #include <dirent.h>
 #include <unistd.h>
@@ -41,6 +34,14 @@ extern "C"
 #pragma warning(pop)
 #include <direct.h>
 #endif  // _WIN32
+
+#include "rcutils/filesystem.h"
+
+#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/stat.h>
 
 #include "rcutils/format_string.h"
 #include "rcutils/repl_str.h"

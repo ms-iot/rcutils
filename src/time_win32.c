@@ -21,8 +21,6 @@ extern "C"
 {
 #endif
 
-#include "rcutils/time.h"
-
 // When building with MSVC 19.28.29333.0 on Windows 10 (as of 2020-11-11),
 // there appears to be a problem with winbase.h (which is included by
 // Windows.h).  In particular, warnings of the form:
@@ -35,6 +33,8 @@ extern "C"
 #pragma warning(disable : 5105)
 #include <windows.h>
 #pragma warning(pop)
+
+#include "rcutils/time.h"
 
 #include "./common.h"
 #include "rcutils/allocator.h"

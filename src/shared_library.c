@@ -16,9 +16,6 @@
 extern "C"
 {
 #endif
-#include <stdio.h>
-#include <stdlib.h>
-
 #ifndef _WIN32
 #include <dlfcn.h>
 #else
@@ -36,6 +33,9 @@ extern "C"
 #pragma warning(pop)
 C_ASSERT(sizeof(void *) == sizeof(HINSTANCE));
 #endif  // _WIN32
+
+#include <stdio.h>
+#include <stdlib.h>
 
 #include "rcutils/error_handling.h"
 #include "rcutils/macros.h"

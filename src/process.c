@@ -17,10 +17,6 @@ extern "C"
 {
 #endif
 
-#include <errno.h>
-#include <stdlib.h>
-#include <string.h>
-
 #if defined _WIN32 || defined __CYGWIN__
 // When building with MSVC 19.28.29333.0 on Windows 10 (as of 2020-11-11),
 // there appears to be a problem with winbase.h (which is included by
@@ -38,6 +34,10 @@ extern "C"
 #include <libgen.h>
 #include <unistd.h>
 #endif
+
+#include <errno.h>
+#include <stdlib.h>
+#include <string.h>
 
 #include "rcutils/allocator.h"
 #include "rcutils/error_handling.h"

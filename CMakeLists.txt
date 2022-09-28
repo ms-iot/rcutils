@@ -70,9 +70,6 @@ set(rcutils_sources
   ${time_impl_c}
   src/uint8_array.c
 )
-set_source_files_properties(
-  ${rcutils_sources}
-  PROPERTIES language "C")
 
 # "watch" template/inputs for changes
 configure_file(
